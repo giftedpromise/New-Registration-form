@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/Register-Login-Form/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/Register-Login-Form/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "client/Register-Login-Form/$1"
+    }
+  ]
+}
